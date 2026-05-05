@@ -1,3 +1,7 @@
 * {
   background-colour: blue;
 }
+.property-wrapper .page-header {
+    /* color: #002d96 !important; */
+       color: #fa0404 !important;
+}
