@@ -241,8 +241,8 @@ flowchart LR
     A[Modificare mică] --> B[Commit]
     B --> C[Test pe site]
     C --> D{Arată bine?}
-    D -- Da --> E[Păstrezi]
-    D -- Nu --> F[Repari sau revii]
+    D --> E[Da: păstrezi]
+    D --> F[Nu: repari sau revii]
 ```
 
 ---
@@ -508,16 +508,25 @@ Cerințe:
 Pe scurt:
 
 ```mermaid
-%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#002d96", "primaryTextColor": "#ffffff", "primaryBorderColor": "#c37701", "lineColor": "#c37701", "secondaryColor": "#fff4e6", "tertiaryColor": "#ffffff", "fontFamily": "Arial"}}}%%
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#002d96", "primaryTextColor": "#ffffff", "primaryBorderColor": "#c37701", "lineColor": "#c37701", "secondaryColor": "#f6efe4", "secondaryTextColor": "#111111", "tertiaryColor": "#ffffff", "tertiaryTextColor": "#111111", "edgeLabelBackground": "#ffffff", "fontFamily": "Arial"}}}%%
 flowchart TD
     A[Idee sau problemă] --> B{Ce vrei?}
-    B -->|Explicație / text / exemplu| C[ChatGPT]
-    B -->|Modificare în repository| D[Codex]
-    C --> E[Cod mai bun]
-    D --> E[Cod mai bun]
-    E --> F[GitHub]
-    F --> G[jsDelivr]
-    G --> H[Website]
+    B --> C[Explicație, text sau exemplu]
+    B --> D[Modificare în repository]
+    C --> E[ChatGPT]
+    D --> F[Codex]
+    E --> G[Cod mai bun]
+    F --> G
+    G --> H[GitHub]
+    H --> I[jsDelivr]
+    I --> J[Website]
+
+    classDef core fill:#002d96,stroke:#c37701,color:#ffffff,stroke-width:2px;
+    classDef light fill:#ffffff,stroke:#c37701,color:#111111,stroke-width:2px;
+    classDef soft fill:#f6efe4,stroke:#c37701,color:#111111,stroke-width:2px;
+
+    class A,B,E,F,G,H,I,J core;
+    class C,D light;
 ```
 
 ---
@@ -865,8 +874,8 @@ flowchart TD
     D --> E[Commit clar]
     E --> F[Verifici în CMS / website]
     F --> G{Totul merge?}
-    G -- Da --> H[Continui cu următoarea îmbunătățire]
-    G -- Nu --> I[Revii, repari, testezi iar]
+    G --> H[Da: continui cu următoarea îmbunătățire]
+    G --> I[Nu: revii, repari, testezi iar]
     I --> F
 ```
 
