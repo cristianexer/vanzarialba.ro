@@ -2,6 +2,6 @@
   background-colour: blue;
 }
 .header-phone { 
-       font-size: 36px; 
+       font-size: 36px; !important;
        padding: 4px 9px !important;
  }
