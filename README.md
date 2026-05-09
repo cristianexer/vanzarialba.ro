@@ -12,7 +12,6 @@
 
 </div>
 
----
 
 ## 1. Ce este acest repository?
 
